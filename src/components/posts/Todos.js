@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import TodoItem from "./TodoItem"
 
 
 const useStyles = makeStyles({
@@ -62,7 +63,7 @@ const Todos = () => {
               {!loading && todos.length === 0 ? (
                 <p>No logs</p>
               ) : (
-                todos.map((todo) => <li>{todo.message}</li>)
+                todos.map((todo) => <TodoItem todo={todo} key={todo.id}/>)
               )}
             </li>
           </ul>
