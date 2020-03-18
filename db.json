@@ -1,9 +1,39 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "todos": [
+    {
+      "message": "Create a React App",
+      "favorite": true,
+      "username": "Fredo",
+      "date": "23-02-2020",
+      "id": 1
+    },
+    {
+      "message": "Develop a WEB UI",
+      "favorite": true,
+      "username": "John",
+      "date": "13-03-2020",
+      "id": 2
+    },
+    {
+      "message": "Build a ReactNative App",
+      "favorite": true,
+      "username": "Fredo",
+      "date": "24-02-2020",
+      "id": 3
+    },
+    {
+      "message": "Design Landing Page Banner",
+      "favorite": true,
+      "username": "Wunmi",
+      "date": "27-02-2020",
+      "id": 4
+    },
+    {
+      "message": "Utilize fiverr account",
+      "favorite": true,
+      "username": "Qoder",
+      "date": "23-02-2020",
+      "id": 5
+    }
+  ]
+}

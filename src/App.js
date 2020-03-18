@@ -1,11 +1,15 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
+import Todos from "./components/posts/Todos";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World, Port 3000 working, Git working</h1>
-    </div>
+    <Fragment>
+      <SearchBar/>
+      <Todos/>
+    </Fragment>
   );
 }
 
