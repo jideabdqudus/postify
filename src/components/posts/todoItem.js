@@ -1,14 +1,13 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 
 const TodoItem = ({ todo }) => {
   return (
-    <li>
+    <li className="collection-item">
       <div>
         <a href="#edit-todo-modal" component="button" variant="body2">
-          {todo.message}
+          <h5>{todo.message}</h5>
         </a>
         <br />
         <span className="grey-text">
@@ -18,7 +17,7 @@ const TodoItem = ({ todo }) => {
         </span>
         <br/>
         <span>
-        <i className="material-icons">mood</i>
+        {todo.favorite? <i class="material-icons">mood</i>:''}
         </span>
         <a href="#" className="secondary-content">
           <i className="material-icons grey-text">delete</i>

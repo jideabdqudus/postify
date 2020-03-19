@@ -9,14 +9,14 @@
     },
     {
       "message": "Develop a WEB UI",
-      "favorite": true,
+      "favorite": false,
       "username": "John",
       "date": "03-13-2020",
       "id": 2
     },
     {
       "message": "Build a ReactNative App",
-      "favorite": true,
+      "favorite": false,
       "username": "Fredo",
       "date": "02-24-2020",
       "id": 3
@@ -30,7 +30,7 @@
     },
     {
       "message": "Utilize fiverr account",
-      "favorite": true,
+      "favorite": false,
       "username": "Qoder",
       "date": "02-23-2020",
       "id": 5

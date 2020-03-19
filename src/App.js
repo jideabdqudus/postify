@@ -1,15 +1,22 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useEffect} from "react";
 import "./App.css";
 import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 import SearchBar from "./components/SearchBar";
 import Todos from "./components/posts/Todos";
 
 
-function App() {
+const App =()=> {
+  useEffect(()=>{
+    //Initialize Materialize JS
+    M.AutoInit()
+  })
   return (
     <Fragment>
-      <SearchBar/>
-      <Todos/>
+    <SearchBar/>
+    <div className="container">
+        <Todos/>
+    </div>
     </Fragment>
   );
 }
