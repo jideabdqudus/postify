@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddBtn = () => {
+const LeftPanel = () => {
     return (
         <div>
             
@@ -8,5 +8,4 @@ const AddBtn = () => {
     )
 }
 
-
-export default AddBtn;
+export default LeftPanel
