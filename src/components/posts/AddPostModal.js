@@ -7,46 +7,45 @@ const AddPostModal = () => {
   const [user, setUser] = useState("");
 
   const onsubmit = () => {
-    if (message ==="" || user === ""){
-        M.toast({html: "Please enter a message and select a user"})
-    }else{
-        console.log(message, favorite)
+    if (message === "" || user === "") {
+      M.toast({ html: "Please enter a message and select a user" });
+    } else {
+      console.log(message, favorite);
     }
   };
 
   return (
-    <div id="add-post-modal" className="modal" style={modalStyle}>
-      <div className="modal-content">
-        <h4>What's on your mind</h4>
-      </div>
-      <div className="row">
-          <div className="input-field">
-            <input
-              type="text"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-            <label htmlFor="message" className="active">
-              Post
-            </label>
-          </div>
-        </div>
-      <div className="row">
+    
+    <div id="add-post-modal" className="modal">
+    <div className="modal-content">  
+    <h5>What are you thinking of?</h5>
+      <div>
         <div className="input-field">
-          <select
-            name="tech"
-            className="browser-default"
+          <input
+            type="text"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <label htmlFor="message" className="active">
+            Post
+          </label>
+        </div>
+      </div>
+      <div>
+        <div className="input-field">
+          <input
+            type="text"
+            name="user"
             value={user}
             onChange={(e) => setUser(e.target.value)}
-          >
-            <option value="" disabled>
-              Select User
-            </option>
-          </select>
+          />
+          <label htmlFor="message" className="active">
+            Username
+          </label>
         </div>
       </div>
-      <div className="row">
+      <div className="">
         <div className="input-field">
           <p>
             <label>
@@ -57,12 +56,12 @@ const AddPostModal = () => {
                 checked={favorite}
                 onChange={(e) => setFavorite(!favorite)}
               />
-              <span>Favorite</span>
+              <span>Favorite this Post</span>
             </label>
           </p>
         </div>
       </div>
-      <div className="modal-footer">
+      <div className="">
         <a
           href="#!"
           className="modal-close waves-effect blue waves-light btn"
@@ -72,12 +71,8 @@ const AddPostModal = () => {
         </a>
       </div>
     </div>
+    </div>
   );
-};
-
-const modalStyle = {
-  width: "75%",
-  height: "75%"
 };
 
 export default AddPostModal;

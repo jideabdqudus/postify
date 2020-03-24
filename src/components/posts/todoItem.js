@@ -19,15 +19,16 @@ const TodoItem = ({ todo }) => {
           </div>
           <div class="card-action">
             <a href="#">
-              <i
-                className="material-icons grey-text"
-                style={{ paddingRight: "5px" }}
-              >
-                delete
-              </i>
-              <i className="material-icons blue-text">edit</i>
+              <i className="material-icons grey-text">delete</i>
             </a>
-            {todo.favorite ? <i className="material-icons right blue-text">mood</i> : ""}
+            <a href="#edit-post-modal">
+              <i className="material-icons blue-text modal-trigger">edit</i>
+            </a>
+            {todo.favorite ? (
+              <i className="material-icons right blue-text">mood</i>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

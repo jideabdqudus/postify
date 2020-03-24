@@ -17,7 +17,6 @@ const App =()=> {
     <Fragment>
     <SearchBar/>
     <div className="container">
-        <AddBtn/>
         <AddPostModal/>
         <Todos/>
     </div>
