@@ -10,7 +10,12 @@ const AddPostModal = () => {
     if (message === "" || user === "") {
       M.toast({ html: "Please enter a message and select a user" });
     } else {
-      console.log(message, favorite);
+      console.log(message, user, favorite);
+
+        //Clear Fields
+        setMessage("");
+        setUser("");
+        setFavorite(false);
     }
   };
 

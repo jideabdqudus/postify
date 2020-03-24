@@ -1,0 +1,10 @@
+export const GET_POSTS = "GET_POSTS";
+export const ADD_POSTS = "ADD_POSTS";
+export const DELETE_POSTS = "DELETE_POSTS";
+export const SET_CURRENT = "SET_CURRENT";
+export const CLEAR_CURRENT = "CLEAR_CURRENT";
+export const UPDATE_POSTS = "UPDATE_POSTS";
+export const CLEAR_POSTS = "CLEAR_POSTS";
+export const SET_LOADING = "SET_LOADING";
+export const POST_ERROR = "POST_ERROR";
+export const SEARCH_POSTS = "SEARCH_POSTS";
