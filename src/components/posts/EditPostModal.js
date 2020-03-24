@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-const AddPostModal = () => {
+const EditPostModal = () => {
   const [message, setMessage] = useState("");
   const [favorite, setFavorite] = useState(false);
   const [user, setUser] = useState("");
@@ -15,7 +15,7 @@ const AddPostModal = () => {
   };
 
   return (
-    <div id="add-post-modal" className="modal" style={modalStyle}>
+    <div id="edit-post-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
         <h4>What's on your mind</h4>
       </div>
@@ -80,4 +80,4 @@ const modalStyle = {
   height: "75%"
 };
 
-export default AddPostModal;
+export default EditPostModal;

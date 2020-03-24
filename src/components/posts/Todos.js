@@ -28,16 +28,19 @@ const Todos = () => {
   }
 
   return (
-          <ul className="collection with-header">
-            <li className="collection-header">
+        <div>  
+        <div className="collection with-header">
+          
+          <li className="collection-header">
               <h4 className="center">Posts</h4>
             </li>
-              {!loading && todos.length === 0 ? (
-                <p className="center">No posts</p>
-              ) : (
-                todos.map((todo) => <TodoItem todo={todo} key={todo.id}/>)
-              )}
-          </ul>
+          </div>
+          {!loading && todos.length === 0 ? (
+            <p className="center">No posts</p>
+          ) : (
+            todos.map((todo) => <TodoItem todo={todo} key={todo.id}/>)
+          )}
+        </div>
   );
 }
 
