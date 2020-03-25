@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
 
-const Todos = () => {
+const Todos = ({ post }) => {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +18,7 @@ const Todos = () => {
     const data = await res.json();
 
     setTodos(data);
-    setLoading(false);
+    setLoading(false); 
   };
 
   if (loading) {
@@ -35,7 +36,6 @@ const Todos = () => {
                 href="#add-post-modal"
                 class="btn-floating modal-trigger halfway-fab waves-effect waves-light red"
               >
-           
                 <i class="material-icons">add</i>
               </a>
             </div>
@@ -58,4 +58,9 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+const mapStateToProps = (state) => ({
+  post: state.post,
+  loading: state.post.loading
+});
+
+export default connect(mapStateToProps)(Todos);
