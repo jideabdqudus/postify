@@ -24,7 +24,7 @@ const Todos = ({ post }) => {
   if (loading) {
     return <Preloader />;
   }
-
+  
   return (
     <div>
       <div class="row">
