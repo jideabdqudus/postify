@@ -1,4 +1,4 @@
-import { GET_POSTS, SET_LOADING, LOGS_ERROR, POST_ERROR } from "./types";
+import { GET_POSTS, SET_LOADING, POST_ERROR } from "./types";
 
 //Get Posts from Server
 export const getPosts = () => async (dispatch) => {
