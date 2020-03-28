@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
+import PropTypes from "prop-types";
+import { getTodos } from "../../actions/postActions";
 
-const Todos = ({ post }) => {
-  const [todos, setTodos] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+const Todos = ({todo: { todos, loading}, getTodos }) => {
   useEffect(() => {
     getTodos();
     //eslint-disable-next-line
   }, []);
 
-  const getTodos = async () => {
-    setLoading(true);
-    const res = await fetch("/todos");
-    const data = await res.json();
-
-    setTodos(data);
-    setLoading(false);
-  };
-
-  if (loading) {
+  if (loading || todos === null) {
     return <Preloader />;
   }
 
@@ -49,18 +39,22 @@ const Todos = ({ post }) => {
           </div>
         </div>
       </div>
-      {!loading && todos.length === 0 ? (
+      {!loading && todos && todos.length === 0 ? (
         <p className="center">No posts</p>
       ) : (
-        todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
+        todos.map((todo) => <TodoItem post={todo} key={todo.id} />)
       )}
     </div>
   );
 };
 
+Todos.propTypes = {
+  todo: PropTypes.object.isRequired,
+  getTodos: PropTypes.func.isRequired
+};
+
 const mapStateToProps = (state) => ({
-  post: state.post,
-  loading: state.post.loading
+  todo: state.todo
 });
 
-export default connect(mapStateToProps)(Todos);
+export default connect(mapStateToProps, { getTodos })(Todos);
