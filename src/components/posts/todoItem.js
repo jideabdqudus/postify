@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
+import M from "materialize-css/dist/js/materialize.min.js";
+import { deleteTodos, setCurrent } from "../../actions/todoActions";
+import { connect } from "react-redux";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, deleteTodos, setCurrent }) => {
+  const onDelete = () => {
+    deleteTodos(todo.id);
+    M.toast({ html: "Todo Deleted" });
+  };
   return (
     <div className="row">
       <div className="col s6 m6">
@@ -19,9 +26,15 @@ const TodoItem = ({ todo }) => {
           </div>
           <div className="card-action">
             <a href="#!">
-              <i className="material-icons grey-text">delete</i>
+              <i className="material-icons grey-text" onClick={onDelete}>
+                delete
+              </i>
             </a>
-            <a href="#edit-post-modal" className="modal-trigger">
+            <a
+              href="#edit-post-modal"
+              className="modal-trigger"
+              onClick={() => setCurrent(todo)}
+            >
               <i className="material-icons blue-text">edit</i>
             </a>
             {todo.favorite ? (
@@ -37,8 +50,9 @@ const TodoItem = ({ todo }) => {
 };
 
 TodoItem.propTypes = {
-  todo: PropTypes.object.isRequired
+  todo: PropTypes.object.isRequired,
+  deleteTodos: PropTypes.func.isRequired,
+  setCurrent: PropTypes.func.isRequired
 };
 
-export default TodoItem;
-
+export default connect(null, { deleteTodos, setCurrent })(TodoItem);

@@ -1,11 +1,18 @@
 {
   "todos": [
     {
+      "id": 1,
       "message": "First Post",
-      "favorite": true,
-      "username": "Qudus",
-      "date": "2020-03-29T19:23:05.662Z",
-      "id": 1
+      "favorite": false,
+      "username": "Jide Abdul-Qudus",
+      "date": "2020-03-29T20:15:17.244Z"
+    },
+    {
+      "message": "Delete try",
+      "favorite": false,
+      "username": "Aisha",
+      "date": "2020-03-29T19:43:42.712Z",
+      "id": 2
     }
   ]
 }

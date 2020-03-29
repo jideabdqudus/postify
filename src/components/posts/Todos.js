@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
-import {getTodos} from "../../actions/todoActions"
+import { getTodos } from "../../actions/todoActions";
 
 const Todos = ({ todos, loading, getTodos }) => {
   useEffect(() => {
     getTodos();
     //eslint-disable-next-line
   }, []);
-  
+
   if (loading || todos === null) {
     return <Preloader />;
   }
@@ -30,9 +30,9 @@ const Todos = ({ todos, loading, getTodos }) => {
             </div>
             <div className="card-content">
               <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
+                Twitter is like Reddit, reddit is like Quora, what's like the 3
+                of them? POSTIFY. Enjoy informative posts from your favorite
+                picks each day
               </p>
             </div>
           </div>
@@ -47,11 +47,9 @@ const Todos = ({ todos, loading, getTodos }) => {
   );
 };
 
-
-
 const mapStateToProps = (state) => ({
   todos: state.todo.todos,
   loading: state.todo.loading
 });
 
-export default connect(mapStateToProps, {getTodos})(Todos);
+export default connect(mapStateToProps, { getTodos })(Todos);

@@ -1,4 +1,13 @@
-import { GET_TODOS, SET_LOADING, TODO_ERROR, ADD_TODOS } from "../actions/types";
+import {
+  GET_TODOS,
+  SET_LOADING,
+  TODO_ERROR,
+  ADD_TODOS,
+  DELETE_TODOS,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_TODOS
+} from "../actions/types";
 
 const initialState = {
   todos: null,
@@ -16,15 +25,38 @@ export default (state = initialState, action) => {
         loading: false
       };
     case ADD_TODOS:
-      return{
+      return {
         ...state,
         todos: [...state.todos, action.payload],
-        loading:false
-      }
+        loading: false
+      };
+    case DELETE_TODOS:
+      return {
+        ...state,
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
+        loading: false
+      };
     case SET_LOADING:
       return {
         ...state,
         loading: true
+      };
+    case UPDATE_TODOS:
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === action.payload.id ? action.payload : todo
+        )
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null
       };
     case TODO_ERROR:
       console.error(action.payload);
