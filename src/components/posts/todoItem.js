@@ -4,21 +4,21 @@ import Moment from "react-moment";
 
 const TodoItem = ({ todo }) => {
   return (
-    <div class="row">
-      <div class="col s6 m6">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
+    <div className="row">
+      <div className="col s6 m6">
+        <div className="card blue-grey darken-1">
+          <div className="card-content white-text">
             <p className="grey-text">
               Post {todo.id} by{" "}
               <Moment className="grey-text right" format="MMMM Do YYYY">
                 {todo.date}
               </Moment>
             </p>
-            <span class="card-title">{todo.username}</span>
+            <span className="card-title">{todo.username}</span>
             <p>{todo.message}</p>
           </div>
-          <div class="card-action">
-            <a href="#">
+          <div className="card-action">
+            <a href="#!">
               <i className="material-icons grey-text">delete</i>
             </a>
             <a href="#edit-post-modal" className="modal-trigger">

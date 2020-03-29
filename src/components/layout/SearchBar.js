@@ -10,7 +10,7 @@ const SearchBar = () => {
       <form className="right hide-on-med-and-down">
         <div className="input-field">
           <input id="search" type="search"/>
-          <label className="label-icon" for="search"><i className="material-icons left">search</i></label>
+          <label className="label-icon" htmlFor="search"><i className="material-icons left">search</i></label>
           <i className="material-icons">close</i>
         </div>
       </form>

@@ -1,45 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
+import {getTodos} from "../../actions/todoActions"
 
-const Todos = ({ post }) => {
-  const [todos, setTodos] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+const Todos = ({ todos, loading, getTodos }) => {
   useEffect(() => {
     getTodos();
     //eslint-disable-next-line
   }, []);
-
-  const getTodos = async () => {
-    setLoading(true);
-    const res = await fetch("/todos");
-    const data = await res.json();
-
-    setTodos(data);
-    setLoading(false);
-  };
-
-  if (loading) {
+  
+  if (loading || todos === null) {
     return <Preloader />;
   }
 
   return (
     <div>
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-image">
-              <span class="card-title"></span>
+      <div className="row">
+        <div className="col s12 m6">
+          <div className="card">
+            <div className="card-image">
+              <span className="card-title"></span>
               <a
                 href="#add-post-modal"
-                class="btn-floating modal-trigger halfway-fab waves-effect waves-light red"
+                className="btn-floating modal-trigger halfway-fab waves-effect waves-light red"
               >
-                <i class="material-icons">add</i>
+                <i className="material-icons">add</i>
               </a>
             </div>
-            <div class="card-content">
+            <div className="card-content">
               <p>
                 I am a very simple card. I am good at containing small bits of
                 information. I am convenient because I require little markup to
@@ -58,9 +47,11 @@ const Todos = ({ post }) => {
   );
 };
 
+
+
 const mapStateToProps = (state) => ({
-  post: state.post,
-  loading: state.post.loading
+  todos: state.todo.todos,
+  loading: state.todo.loading
 });
 
-export default connect(mapStateToProps)(Todos);
+export default connect(mapStateToProps, {getTodos})(Todos);

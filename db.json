@@ -1,39 +1,11 @@
 {
   "todos": [
     {
-      "message": "Create a React App",
+      "message": "First Post",
       "favorite": true,
-      "username": "Fredo",
-      "date": "02-23-2020",
+      "username": "Qudus",
+      "date": "2020-03-29T19:23:05.662Z",
       "id": 1
-    },
-    {
-      "message": "Develop a WEB UI",
-      "favorite": false,
-      "username": "John",
-      "date": "03-13-2020",
-      "id": 2
-    },
-    {
-      "message": "Build a ReactNative App",
-      "favorite": false,
-      "username": "Fredo",
-      "date": "02-24-2020",
-      "id": 3
-    },
-    {
-      "message": "Design Landing Page Banner",
-      "favorite": true,
-      "username": "Wunmi",
-      "date": "02-27-2020",
-      "id": 4
-    },
-    {
-      "message": "Utilize fiverr account",
-      "favorite": false,
-      "username": "Qoder",
-      "date": "02-23-2020",
-      "id": 5
     }
   ]
 }

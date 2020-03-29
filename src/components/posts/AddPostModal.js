@@ -1,20 +1,30 @@
 import React, { useState } from "react";
+import {connect} from "react-redux"
+import PropTypes from 'prop-types'
+import {addTodos} from "../../actions/todoActions"
 import M from "materialize-css/dist/js/materialize.min.js";
 
-const AddPostModal = () => {
+const AddPostModal = ({addTodos}) => {
   const [message, setMessage] = useState("");
   const [favorite, setFavorite] = useState(false);
-  const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
 
   const onsubmit = () => {
-    if (message === "" || user === "") {
+    if (message === "" || username === "") {
       M.toast({ html: "Please enter a message and select a user" });
     } else {
-      console.log(message, user, favorite);
+        const newTodo = {
+          message,
+          favorite,
+          username,
+          date: new Date()
+        }
+        addTodos(newTodo)
 
+        M.toast({html: `Post by ${username}`})
         //Clear Fields
         setMessage("");
-        setUser("");
+        setUsername("");
         setFavorite(false);
     }
   };
@@ -42,8 +52,8 @@ const AddPostModal = () => {
           <input
             type="text"
             name="user"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <label htmlFor="message" className="active">
             Username
@@ -80,4 +90,8 @@ const AddPostModal = () => {
   );
 };
 
-export default AddPostModal;
+AddPostModal.propTypes={
+  addTodos:PropTypes.func.isRequired
+}
+
+export default connect(null, {addTodos}) (AddPostModal);
