@@ -103,25 +103,24 @@ export const updateTodo = (todo) => async (dispatch) => {
 };
 
 // Search todos from the server
-export const searchTodos =(text) => async (dispatch) =>{
-  try{
+export const searchTodos = (text) => async (dispatch) => {
+  try {
     setLoading();
 
-    const res = await fetch (`/todos?q=${text}`);
-    const data = await res.json()
+    const res = await fetch(`/todos?q=${text}`);
+    const data = await res.json();
 
     dispatch({
       type: SEARCH_TODOS,
       payload: data
-    })
-  } catch (error){
+    });
+  } catch (error) {
     dispatch({
       type: TODO_ERROR,
       payload: error.response.statusText
-    })
+    });
   }
-}
-
+};
 
 //Set current todo
 export const setCurrent = (todo) => {

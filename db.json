@@ -20,6 +20,13 @@
       "favorite": false,
       "username": "Aisha",
       "date": "2020-03-29T21:06:22.366Z"
+    },
+    {
+      "id": 4,
+      "message": "LiL snupe",
+      "favorite": true,
+      "username": "Hus ",
+      "date": "2020-03-30T08:57:43.073Z"
     }
   ]
 }
