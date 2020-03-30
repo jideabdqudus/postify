@@ -18,7 +18,7 @@ const AddPostModal = ({addTodos}) => {
           favorite,
           username,
           date: new Date()
-        }
+        } 
         addTodos(newTodo)
 
         M.toast({html: `Post by ${username}`})
