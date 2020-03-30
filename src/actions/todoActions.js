@@ -6,7 +6,8 @@ import {
   DELETE_TODOS,
   UPDATE_TODOS,
   SET_CURRENT,
-  CLEAR_CURRENT
+  CLEAR_CURRENT,
+  SEARCH_TODOS
 } from "./types";
 
 //Get Todos from Server
@@ -24,7 +25,7 @@ export const getTodos = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: TODO_ERROR,
-      payload: error.response.data
+      payload: error.response.statusText
     });
   }
 };
@@ -101,7 +102,28 @@ export const updateTodo = (todo) => async (dispatch) => {
   }
 };
 
-//Set current log
+// Search todos from the server
+export const searchTodos =(text) => async (dispatch) =>{
+  try{
+    setLoading();
+
+    const res = await fetch (`/todos?q=${text}`);
+    const data = await res.json()
+
+    dispatch({
+      type: SEARCH_TODOS,
+      payload: data
+    })
+  } catch (error){
+    dispatch({
+      type: TODO_ERROR,
+      payload: error.response.statusText
+    })
+  }
+}
+
+
+//Set current todo
 export const setCurrent = (todo) => {
   return {
     type: SET_CURRENT,
@@ -109,7 +131,7 @@ export const setCurrent = (todo) => {
   };
 };
 
-//Clear current log
+//Clear current todo
 export const clearCurrent = () => {
   return {
     type: CLEAR_CURRENT

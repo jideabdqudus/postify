@@ -13,6 +13,13 @@
       "username": "Aisha",
       "date": "2020-03-29T19:43:42.712Z",
       "id": 2
+    },
+    {
+      "id": 3,
+      "message": "Another Post again",
+      "favorite": false,
+      "username": "Aisha",
+      "date": "2020-03-29T21:06:22.366Z"
     }
   ]
 }

@@ -6,7 +6,8 @@ import {
   DELETE_TODOS,
   SET_CURRENT,
   CLEAR_CURRENT,
-  UPDATE_TODOS
+  UPDATE_TODOS,
+  SEARCH_TODOS
 } from "../actions/types";
 
 const initialState = {
@@ -47,6 +48,11 @@ export default (state = initialState, action) => {
         todos: state.todos.map((todo) =>
           todo.id === action.payload.id ? action.payload : todo
         )
+      };
+    case SEARCH_TODOS:
+      return {
+        ...state,
+        todos: action.payload
       };
     case SET_CURRENT:
       return {
