@@ -56,3 +56,5 @@ TodoItem.propTypes = {
 };
 
 export default connect(null, { deleteTodos, setCurrent })(TodoItem);
+
+//Fixing the UI
