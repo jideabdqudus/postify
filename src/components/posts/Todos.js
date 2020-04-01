@@ -26,10 +26,10 @@ const Todos = ({ todos, loading, getTodos }) => {
                 style={{ maxWidth: "100%", maxheight: "100%" }}
               />
 
-              <a className="avatar btn-floating halfway-fab waves-effect waves-light left">
+              <a className="avatar large btn-floating halfway-fab waves-effect waves-light left">
                 <img
                   src={require("./Q.jpg")}
-                  style={{ height: "100px", width: "100px" }}
+                  style={{}}
                   className="circle large"
                 />
               </a>
@@ -40,14 +40,38 @@ const Todos = ({ todos, loading, getTodos }) => {
                 <i className="material-icons">add</i>
               </a>
             </div>
-            <div className="card-content">
-              <p>Profile</p>
+            <div className="card-content activator waves-effect waves-block">
+              <b style={{ fontSize: "20px" }}>Qudusini</b>
+              <p style={{ fontSize: "17px" }}>@jideabdqudus</p>
+              <p>
+                I often use IF statements and can google better than the average
+                human. (MERN) #Software #Dev. I love building apps with
+                API-centric backends, developing UI/UX and writing technical
+                reports.
+              </p>
+              <p className="blue-text" style={{ fontSize: "13px" }}>
+                <i className="material-icons">my_location</i> Lagos, Nigeria.
+              </p>
+              <p className="blue-text" style={{ fontSize: "13px" }}>
+                <i className="material-icons">insert_link</i>{" "}
+                <a>www.medium.com/@abdulqudusao</a>
+              </p>
+              <b>
+                Posts: {todos.length} {"   "}{" "}
+              </b>
             </div>
             <div className="card-reveal">
               <span className="card-title grey-text text-darken-4">
-                Card Title <i className="material-icons right">close</i>
+                Bio <i className="material-icons right">close</i>
               </span>
-              <p>Here is more information when clicked</p>
+              <p>
+                {" "}
+                I often use IF statements and can google better than the average
+                human. (MERN) #Software #Dev. I love building apps with
+                API-centric backends, developing UI/UX and writing technical
+                reports.
+              </p>
+              <br/><p className="grey-text">Twitter is just like Reddit, Reddit is just like Quora, guess what's like the 3 of them?</p>
             </div>
           </div>
         </div>
