@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderIm from "./i2.jpg"
+import HeaderIm from "./Q.jpg"
 
-const HeaderImage = () => {
+export const HeaderImage = () => {
   return <img src={HeaderIm}/>;
 };
 

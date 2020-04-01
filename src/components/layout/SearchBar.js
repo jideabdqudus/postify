@@ -13,7 +13,7 @@ const SearchBar = ({ searchTodos }) => {
       <nav style={{ marginBottom: "30px" }} className="red">
         <div className="nav-wrapper">
           <a href="#!" className="brand-logo" style={{ paddingLeft: "10px" }}>
-            <img src="../waves.png" style={{ height: "50px", width: "50px" }} />
+            <img src="./waves.png" style={{ height: "50px", width: "50px" }} />
           </a>
           <form className="right hide-on-med-and-down">
             <div className="input-field">

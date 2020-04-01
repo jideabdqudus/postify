@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
 import { getTodos } from "../../actions/todoActions";
-import HeaderImage from "./HeaderImage";
 
 const Todos = ({ todos, loading, getTodos }) => {
   useEffect(() => {
@@ -18,10 +17,22 @@ const Todos = ({ todos, loading, getTodos }) => {
   return (
     <div>
       <div className="row">
-        <div className="col s12 m6">
+        <div className="col s12 m12">
           <div className="card">
             <div className="card-image">
-              <span className="card-title"></span>
+              <img
+                className="activator waves-effect waves-block waves-light"
+                src={require("./header.jpg")}
+                style={{ maxWidth: "100%", maxheight: "100%" }}
+              />
+
+              <a className="avatar btn-floating halfway-fab waves-effect waves-light left">
+                <img
+                  src={require("./Q.jpg")}
+                  style={{ height: "100px", width: "100px" }}
+                  className="circle large"
+                />
+              </a>
               <a
                 href="#add-post-modal"
                 className="btn-floating modal-trigger halfway-fab waves-effect waves-light red"
@@ -30,7 +41,13 @@ const Todos = ({ todos, loading, getTodos }) => {
               </a>
             </div>
             <div className="card-content">
-              <img src="./i2.png" alt="Header Image" />
+              <p>Profile</p>
+            </div>
+            <div className="card-reveal">
+              <span className="card-title grey-text text-darken-4">
+                Card Title <i className="material-icons right">close</i>
+              </span>
+              <p>Here is more information when clicked</p>
             </div>
           </div>
         </div>
