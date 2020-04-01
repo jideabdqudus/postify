@@ -9,28 +9,30 @@ const SearchBar = ({ searchTodos }) => {
     searchTodos(text.current.value);
   };
   return (
-    <nav style={{ marginBottom: "30px" }} className="blue">
-      <div className="nav-wrapper">
-        <a href="#!" className="brand-logo" style={{ paddingLeft: "10px" }}>
-          POSTIFY
-        </a>
-        <form className="right hide-on-med-and-down">
-          <div className="input-field">
-            <input
-              id="search"
-              placeholder="Search Posts"
-              onChange={onChange}
-              ref={text}
-              type="search"
-            />
-            <label className="label-icon" htmlFor="search">
-              <i className="material-icons left">search</i>
-            </label>
-            <i className="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-    </nav>
+    <div className="navbar-fixed">
+      <nav style={{ marginBottom: "30px" }} className="red">
+        <div className="nav-wrapper">
+          <a href="#!" className="brand-logo" style={{ paddingLeft: "10px" }}>
+            <img src="../waves.png" style={{ height: "50px", width: "50px" }} />
+          </a>
+          <form className="right hide-on-med-and-down">
+            <div className="input-field">
+              <input
+                id="search"
+                placeholder="Search Posts"
+                onChange={onChange}
+                ref={text}
+                type="search"
+              />
+              <label className="label-icon" htmlFor="search">
+                <i className="material-icons left">search</i>
+              </label>
+              <i className="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
   );
 };
 

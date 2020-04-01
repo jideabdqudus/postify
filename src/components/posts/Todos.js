@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 import Preloader from "../layout/Preloader";
 import { getTodos } from "../../actions/todoActions";
+import HeaderImage from "./HeaderImage";
 
 const Todos = ({ todos, loading, getTodos }) => {
   useEffect(() => {
@@ -29,11 +30,7 @@ const Todos = ({ todos, loading, getTodos }) => {
               </a>
             </div>
             <div className="card-content">
-              <p>
-                Twitter is like Reddit, reddit is like Quora, what's like the 3
-                of them? POSTIFY. Enjoy informative posts from your favorite
-                picks each day
-              </p>
+              <img src="./i2.png" alt="Header Image" />
             </div>
           </div>
         </div>

@@ -6,10 +6,8 @@ import SearchBar from "./components/layout/SearchBar";
 import Todos from "./components/posts/Todos";
 import AddPostModal from "./components/posts/AddPostModal";
 import EditPostModal from "./components/posts/EditPostModal";
-import {Provider} from 'react-redux'
-import store from './store';
-
-
+import { Provider } from "react-redux";
+import store from "./store";
 const App = () => {
   useEffect(() => {
     //Initialize Materialize JS
@@ -17,14 +15,14 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-    <Fragment>
-      <SearchBar />
-      <div className="container">
-        <AddPostModal />
-        <EditPostModal />
-        <Todos />
-      </div>
-    </Fragment>
+      <Fragment>
+        <SearchBar />
+        <div className="container">
+          <AddPostModal />
+          <EditPostModal />
+          <Todos />
+        </div>
+      </Fragment>
     </Provider>
   );
 };
