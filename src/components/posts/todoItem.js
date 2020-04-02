@@ -13,34 +13,33 @@ const TodoItem = ({ todo, deleteTodos, setCurrent }) => {
   return (
     <div className="row">
       <div className="col s12 m12">
-      
-  <div class="card">
-  <div class="card-content">
-    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-  </div>
-  <div class="card-tabs">
-    <ul class="tabs tabs-fixed-width">
-      <li class="tab"><a href="#test4">Test 1</a></li>
-      <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-      <li class="tab"><a href="#test6">Test 3</a></li>
-    </ul>
-  </div>
-  <div class="card-content grey lighten-4">
-    <div id="test4">Test 1</div>
-    <div id="test5">Test 2</div>
-    <div id="test6">Test 3</div>
-  </div>
-</div>  
-      <div className="card blue-grey darken-1">
-          <div className="card-content white-text">
-            <p className="grey-text">
-              Post {todo.id} by{" "}
-              <Moment className="grey-text right" format="MMMM Do YYYY">
-                {todo.date}
-              </Moment>
-            </p>
-            <span className="card-title">{todo.username}</span>
+        <div className="card darken-1">
+          <div className="card-content black-text">
+          <div>  
+          <img
+              src={require("./Q.jpg")}
+              style={{}}
+              className="circle  btn-floating"
+            />
+            <span style={{ fontSize: "20px", fontWeight: "bold" }}>
+              {"   "}
+              {todo.username}{" "}
+              <span
+                style={{ fontSize: "14px", fontWeight: "normal" }}
+                className="grey-text right"
+              >
+                @{todo.username}
+              </span>
+            </span>
+            </div>
+            <hr/>
+            <span className="card-title"> </span>
             <p>{todo.message}</p>
+            <p className="grey-text">
+            <Moment className="grey-text right" format="MMMM Do YYYY">
+              {todo.date}
+            </Moment>
+          </p>
           </div>
           <div className="card-action">
             <a href="#!">

@@ -2,9 +2,9 @@
   "todos": [
     {
       "id": 1,
-      "message": "First Post",
+      "message": "Hey Guys, I just published an article titled Lag Mobile App, UI/UX Overview for @UnilagNigeria. I'll be glad to have your review and Re Posts. Kindly click on the link on my Bio to read more ",
       "favorite": false,
-      "username": "Jide Abdul-Qudus",
+      "username": "jideabdulqudus",
       "date": "2020-03-29T20:15:17.244Z"
     },
     {
@@ -27,6 +27,13 @@
       "favorite": true,
       "username": "Hus ",
       "date": "2020-03-30T08:57:43.073Z"
+    },
+    {
+      "id": 5,
+      "message": "This is supposed to be my first post but i keep deleting so that's not true",
+      "favorite": true,
+      "username": "blackboyjide",
+      "date": "2020-04-02T09:59:06.886Z"
     }
   ]
 }

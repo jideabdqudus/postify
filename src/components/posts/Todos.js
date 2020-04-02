@@ -22,7 +22,7 @@ const Todos = ({ todos, loading, getTodos }) => {
             <div className="card-image">
               <img
                 className="activator waves-effect waves-block waves-light"
-                src={require("./header.jpg")}
+                src={require("./postify_art.jpg")}
                 style={{ maxWidth: "100%", maxheight: "100%" }}
               />
 
@@ -50,10 +50,11 @@ const Todos = ({ todos, loading, getTodos }) => {
                 reports.
               </p>
               <p className="blue-text" style={{ fontSize: "13px" }}>
-                <i className="material-icons">my_location</i> Lagos, Nigeria.
+                <i className="material-icons tiny">my_location</i> Lagos,
+                Nigeria.
               </p>
               <p className="blue-text" style={{ fontSize: "13px" }}>
-                <i className="material-icons">insert_link</i>{" "}
+                <i className="material-icons tiny">insert_link</i>{" "}
                 <a>www.medium.com/@abdulqudusao</a>
               </p>
               <b>
@@ -71,16 +72,55 @@ const Todos = ({ todos, loading, getTodos }) => {
                 API-centric backends, developing UI/UX and writing technical
                 reports.
               </p>
-              <br/><p className="grey-text">Twitter is just like Reddit, Reddit is just like Quora, guess what's like the 3 of them?</p>
+              <br />
+              <p className="grey-text">
+                Twitter is just like Reddit, Reddit is just like Quora, guess
+                what's like the 3 of them?
+              </p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab">
+                  <a class="active" href="#posts">
+                    Posts
+                  </a>
+                </li>
+                <li class="tab">
+                  <a
+                    href="#favs"
+                    className="waves-effect waves-light btn modal-trigger"
+                  >
+                    Favorites
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content blue lighten-4">
+              <div id="posts">
+                {!loading && todos.length === 0 ? (
+                  <p className="center">No posts</p>
+                ) : (
+                  todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
+                )}
+              </div>
+            </div>
+          </div>
+          <div id="favs" class="modal bottom-sheet">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat"
+              >
+                Agree
+              </a>
             </div>
           </div>
         </div>
       </div>
-      {!loading && todos.length === 0 ? (
-        <p className="center">No posts</p>
-      ) : (
-        todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
-      )}
     </div>
   );
 };
