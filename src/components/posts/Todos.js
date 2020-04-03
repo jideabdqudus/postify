@@ -128,6 +128,6 @@ const Todos = ({ todos, loading, getTodos }) => {
 const mapStateToProps = (state) => ({
   todos: state.todo.todos,
   loading: state.todo.loading
-});
+}); 
 
 export default connect(mapStateToProps, { getTodos })(Todos);
