@@ -131,5 +131,3 @@ const mapStateToProps = (state) => ({
 }); 
 
 export default connect(mapStateToProps, { getTodos })(Todos);
-
-///I feel terrible not coding 3 dayas straight
