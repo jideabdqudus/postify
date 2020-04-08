@@ -75,13 +75,13 @@ const Todos = ({ todos, loading, getTodos }) => {
               <br />
               <p className="grey-text">
                 Twitter is just like Reddit, Reddit is just like Quora, guess
-                what's like the 3 of them?
+                what's like the 3 of them? POSTIFY
               </p>
             </div>
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width">
                 <li class="tab">
-                  <a class="active" href="#posts">
+                  <a href="#posts">
                     Posts
                   </a>
                 </li>

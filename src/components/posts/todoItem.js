@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 const TodoItem = ({ todo, deleteTodos, setCurrent }) => {
   const onDelete = () => {
     deleteTodos(todo.id);
-    M.toast({ html: "Todo Deleted" });
+    M.toast({ html: "Post Deleted" });
   };
   return (
     <div className="row">
@@ -55,7 +55,7 @@ const TodoItem = ({ todo, deleteTodos, setCurrent }) => {
               <i className="material-icons blue-text">edit</i>
             </a>
             {todo.favorite ? (
-              <i className="material-icons right blue-text">mood</i>
+              <i className="material-icons right blue-text">favorite</i>
             ) : (
               ""
             )}

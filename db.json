@@ -4,36 +4,22 @@
       "id": 1,
       "message": "Hey Guys, I just published an article titled Lag Mobile App, UI/UX Overview for @UnilagNigeria. I'll be glad to have your review and Re Posts. Kindly click on the link on my Bio to read more ",
       "favorite": false,
-      "username": "jideabdulqudus",
+      "username": "jideabdqudus",
       "date": "2020-03-29T20:15:17.244Z"
     },
     {
-      "message": "Delete try",
-      "favorite": false,
-      "username": "Aisha",
-      "date": "2020-03-29T19:43:42.712Z",
+      "message": "This app was developed using React and Redux for state management, styled using Materialize",
+      "favorite": true,
+      "username": "jideabdqudus",
+      "date": "2020-04-08T15:05:10.423Z",
       "id": 2
     },
     {
       "id": 3,
-      "message": "Another Post again",
-      "favorite": false,
-      "username": "Aisha",
-      "date": "2020-03-29T21:06:22.366Z"
-    },
-    {
-      "id": 5,
-      "message": "This is supposed to be my first post but i keep deleting so that's not true",
+      "message": "This post was edited",
       "favorite": true,
-      "username": "blackboyjide",
-      "date": "2020-04-02T09:59:06.886Z"
-    },
-    {
-      "message": "The best is yet to come",
-      "favorite": true,
-      "username": "jide",
-      "date": "2020-04-06T15:15:07.872Z",
-      "id": 6
+      "username": "jideabdqudus",
+      "date": "2020-04-08T15:05:48.891Z"
     }
   ]
 }
